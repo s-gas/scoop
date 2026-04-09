@@ -14,8 +14,12 @@ Command-line tool that displays the directory structure using indentation to sho
 
 ### Available flags:
 
-  -depth int
-      maximum depth (default 4)
-      
-  -hidden
-    	show hidden files
+- Maximum depth (default 4)
+```bash
+--depth
+```
+
+- Show hidden files
+```bash      
+--hidden
+```
