@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func scoop(dir string, depth int) {
+	files, err := os.ReadDir(dir)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%v\n", err)
+		os.Exit(1)
+	}
+	for _, file := range files {
+		fileName := file.Name()
+		if isHidden(fileName) {
+			continue
+		}
+		fmt.Printf("%s%s\n", indent(depth), fileName)
+		if file.Type().IsDir() {
+			dir = dir + "/" + fileName
+			scoop(dir, depth+1)
+		}
+	}
+}
