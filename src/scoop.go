@@ -18,8 +18,7 @@ func scoop(dir string, depth int) {
 		}
 		fmt.Printf("%s%s\n", indent(depth), fileName)
 		if file.Type().IsDir() {
-			dir = dir + "/" + fileName
-			scoop(dir, depth+1)
+			scoop(dir+"/"+fileName, depth+1)
 		}
 	}
 }
