@@ -16,7 +16,7 @@ Command-line tool that displays the directory structure using indentation to sho
 
 - Maximum depth (default 4)
 ```bash
---depth
+--depth INT
 ```
 
 - Show hidden files
