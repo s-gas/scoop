@@ -5,10 +5,13 @@ import (
 	"os"
 )
 
-func scoop(dir string, depth int) {
+func scoop(dir string, flags Flags, depth int) {
+	if depth >= flags.Depth {
+		return
+	}
 	files, err := os.ReadDir(dir)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "%v\n", err)
+		fmt.Fprintf(os.Stderr, "[ Error ] %v\n", err)
 		os.Exit(1)
 	}
 	for _, file := range files {
@@ -18,7 +21,7 @@ func scoop(dir string, depth int) {
 		}
 		fmt.Printf("%s%s\n", indent(depth), fileName)
 		if file.Type().IsDir() {
-			scoop(dir+"/"+fileName, depth+1)
+			scoop(dir+"/"+fileName, flags, depth+1)
 		}
 	}
 }

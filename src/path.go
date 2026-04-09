@@ -10,7 +10,7 @@ func parsePath() (path string) {
 	args := flag.Args()
 	numArgs := len(args)
 	if numArgs > 1 {
-		fmt.Fprintf(os.Stderr, "[ Error ] invalid argument: %s\n", args[0])
+		fmt.Fprintln(os.Stderr, "[ Error ] usage: scoop [FLAGS] [PATH]")
 		os.Exit(1)
 		return ""
 	} else if numArgs == 1 {

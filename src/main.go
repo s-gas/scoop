@@ -3,5 +3,5 @@ package main
 func main() {
 	flags := parseFlags()
 	dir := parsePath()
-	scoop(dir, 0)
+	scoop(dir, flags, 0)
 }
