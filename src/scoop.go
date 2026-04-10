@@ -16,7 +16,7 @@ func scoop(dir string, flags Flags, depth int) {
 	}
 	for _, file := range files {
 		fileName := file.Name()
-		if isHidden(fileName) {
+		if !flags.Hidden && isHidden(fileName) {
 			continue
 		}
 		fmt.Printf("%s%s\n", indent(depth), fileName)
