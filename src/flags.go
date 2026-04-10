@@ -3,8 +3,9 @@ package main
 import "flag"
 
 type Flags struct {
-	Hidden bool
+	Find   string
 	Depth  int
+	Hidden bool
 }
 
 func parseFlags() Flags {

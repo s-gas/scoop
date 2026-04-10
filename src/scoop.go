@@ -19,7 +19,7 @@ func scoop(dir string, flags Flags, depth int) {
 		if !flags.Hidden && isHidden(fileName) {
 			continue
 		}
-		fmt.Printf("%s%s\n", indent(depth), fileName)
+		printFile(fileName, flags, depth)
 		if file.Type().IsDir() {
 			scoop(dir+"/"+fileName, flags, depth+1)
 		}
