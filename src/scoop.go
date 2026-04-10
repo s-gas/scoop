@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"os"
 )
 
@@ -11,8 +11,7 @@ func scoop(dir string, flags Flags, depth int) {
 	}
 	files, err := os.ReadDir(dir)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "[ Error ] %v\n", err)
-		os.Exit(1)
+		log.Fatalf("[ Error ] %v\n", err)
 	}
 	for _, file := range files {
 		fileName := file.Name()

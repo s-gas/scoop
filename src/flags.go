@@ -10,8 +10,9 @@ type Flags struct {
 
 func parseFlags() Flags {
 	flags := Flags{}
-	flag.BoolVar(&flags.Hidden, "hidden", false, "show hidden files")
+	flag.StringVar(&flags.Find, "find", "", "highlight files containing the given string")
 	flag.IntVar(&flags.Depth, "depth", 4, "maximum depth")
+	flag.BoolVar(&flags.Hidden, "hidden", false, "show hidden files")
 	flag.Parse()
 	return flags
 }

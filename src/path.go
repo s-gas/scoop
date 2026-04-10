@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	"log"
 	"os"
 )
 
@@ -10,17 +10,15 @@ func parsePath() (path string) {
 	args := flag.Args()
 	numArgs := len(args)
 	if numArgs > 1 {
-		fmt.Fprintln(os.Stderr, "[ Error ] usage: scoop [flags] [path]")
-		os.Exit(1)
-		return ""
+		log.Fatalln("[ Error ] usage: scoop [flags] [path]")
 	} else if numArgs == 1 {
 		return args[0]
 	} else {
 		path, err := os.Getwd()
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "[ Error ] %v\n", err)
-			os.Exit(1)
+			log.Fatalf("[ Error ] %v\n", err)
 		}
 		return path
 	}
+	return ""
 }
