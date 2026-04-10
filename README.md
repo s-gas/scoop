@@ -26,5 +26,5 @@ Command-line tool that displays the directory structure using indentation to sho
 
 - Highlight files containing given string
 ```bash
--- find string
+--find string
 ```
