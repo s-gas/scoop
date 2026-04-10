@@ -23,3 +23,8 @@ Command-line tool that displays the directory structure using indentation to sho
 ```bash      
 --hidden
 ```
+
+- Highlight files containing given string
+```bash
+-- find string
+```
