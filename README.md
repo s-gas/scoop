@@ -1,10 +1,10 @@
 # scoop
 
-![Screenshot](./assets/scoop-screenshot.png)
-
-## Description
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 
 Command-line tool that displays the directory structure using indentation to show hierarchy.
+
+![Screenshot](./assets/scoop-screenshot.png)
 
 ## How to run
 
