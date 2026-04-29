@@ -6,9 +6,17 @@ Command-line tool that displays the directory structure using indentation to sho
 
 ![Screenshot](./assets/scoop-screenshot.png)
 
-## How to run
+## How to install
 
 *Requires [Go](https://golang.org/dl/) 1.22+*
+
+### Go install
+
+```bash
+go install github.com/s-gas/scoop@latest
+```
+
+### Manual
 
 Clone this repository:
 
@@ -34,7 +42,7 @@ In order to run it from other directories, move the binary to a directory includ
 sudo mv scoop /usr/local/bin
 ```
 
-Run:
+## How to run
 
 ```bash
 scoop [flags] [path]
