@@ -4,8 +4,6 @@
 
 Command-line tool that displays the directory structure using indentation to show hierarchy.
 
-![Screenshot](./assets/scoop-screenshot.png)
-
 ## How to install
 
 *Requires [Go](https://golang.org/dl/) 1.22+*
